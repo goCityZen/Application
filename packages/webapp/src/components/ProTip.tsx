@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
     marginRight: theme.spacing(1)
   }
 }));
-export default function ProTip() {
+export const ProTip = () => {
   const classes = useStyles();
   return (
     <Typography className={classes.root} color="textSecondary">

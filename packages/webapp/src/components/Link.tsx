@@ -8,7 +8,7 @@ import NextLink from 'next/link';
 
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import MuiLink from '@material-ui/core/Link';
+import MuiLink, { LinkBaseProps, LinkProps } from '@material-ui/core/Link';
 interface Props extends React.FC {
 
 }
@@ -38,7 +38,8 @@ const NextComposed = React.forwardRef((props, ref) => {
 
 // A styled version of the Next.js Link component:
 // https://nextjs.org/docs/#with-link
-function Link(props: Props) {
+
+function LinkComponent(props: Props) {
 
   // const preventDefault = (event: React.SyntheticEvent) => event.preventDefault();
 
@@ -65,5 +66,8 @@ function Link(props: Props) {
   );
 }
 
-
-export default React.forwardRef((props, ref) => <Link {...props} innerRef={ref} />);
+interface ComposedLinkProps extends LinkProps {
+  children?: any
+  color?: any
+}
+export const Link = React.forwardRef((props: ComposedLinkProps, ref) => <LinkComponent {...props} innerRef={ref} />);

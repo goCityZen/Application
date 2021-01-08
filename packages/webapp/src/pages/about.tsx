@@ -3,11 +3,9 @@ import React from "react";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
-import Button from "@material-ui/core/Button";
 
-import ProTip from "~/components/ProTip";
-import Link from "~/components/Link";
-import Copyright from "~/components/Copyright";
+import { Link } from "~/components";
+
 export default function About() {
   return (
     <Container maxWidth="sm">
@@ -15,14 +13,9 @@ export default function About() {
         <Typography variant="h4" component="h1" gutterBottom>
           Cityzen About
         </Typography>
-        <Button
-          variant="contained"
-          color="primary"
-          component={Link}
-          href="/"
-        >
+        <Link href="/about" color="secondary">
           Go to Home
-        </Button>
+        </Link>
       </Box>
     </Container>
   );
