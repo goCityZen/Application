@@ -14,7 +14,8 @@
         "typescript:watch": "yarn run typescript:build --watch",
         "typescript:clean": "rimraf  ./packages/*/{lib,*.tsbuildinfo}",
         "update:tsconfig": "ts-node scripts/update-package-tsconfig.ts",
-        "script:populate-git-env:print": ". ./scripts/populate-git-env.sh && echo 'SHA: '${GIT_COMMIT_SHA} && echo 'REF (current branch/tag): '${GIT_COMMIT_REF} && echo 'TAGS: '${GIT_COMMIT_TAGS}"
+        "script:populate-git-env:print": ". ./scripts/populate-git-env.sh && echo 'SHA: '${GIT_COMMIT_SHA} && echo 'REF (current branch/tag): '${GIT_COMMIT_REF} && echo 'TAGS: '${GIT_COMMIT_TAGS}",
+        "preinstall": "yarn workspace @cityzen/webapp run script:populate-git-env:print"
     },
     "workspaces": [
         "packages/*"
