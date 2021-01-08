@@ -4,9 +4,8 @@
 		"noEmit": true,
 		"baseUrl": ".",
 		"paths": {
-			"@template/*": [
-				"./shared/*/src",
-				"./services/*/src"
+			"@ui/*": [
+				"./packages/ui/src"
 			]
 		}
 	}

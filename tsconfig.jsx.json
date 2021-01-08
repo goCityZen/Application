@@ -1,0 +1,18 @@
+{
+    "extends": "./tsconfig.base.json",
+	"compilerOptions": {
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"jsx": "react",
+		"allowJs": true,
+		"composite": true,
+		"declaration": true,
+		"esModuleInterop": true,
+		"resolveJsonModule": true,
+		"noUnusedParameters": true,
+		"noUnusedLocals": true,
+		"noImplicitAny": true,
+		"noImplicitReturns": true,
+		"removeComments": true,
+		"preserveConstEnums": true,
+	}
+}
