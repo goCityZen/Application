@@ -1,0 +1,38 @@
+{
+    "private": true,
+    "scripts": {
+        "--old--build:web": "lerna run build --scope={@cityzen/ui,@cityzen/common,@cityzen/webapp}",
+        "build": "yarn run typescript:build",
+        "watch": "yarn run typescript:watch",
+        "clean": "yarn run typescript:clean",
+        "test": "yarn run test:eslint && yarn run test:jest",
+        "test:jest": "jest --config jest.config.json --no-cache",
+        "test:eslint": "eslint --ignore-path .gitignore packages/*/src/**/*.ts",
+        "typescript:build": "tsc --build ./tsconfig.project.json",
+        "typescript:watch": "yarn run typescript:build --watch",
+        "typescript:clean": "rm -rf ./packages/*/{lib,*.tsbuildinfo}",
+        "update:tsconfig": "ts-node scripts/update-package-tsconfig.ts"
+    },
+    "workspaces": {
+        "packages": [
+            "packages/*"
+        ]
+    },
+    "devDependencies": {
+        "@types/jest": "^26.0.19",
+        "@types/node": "^14.14.13",
+        "@typescript-eslint/eslint-plugin": "^4.10.0",
+        "@typescript-eslint/parser": "^4.10.0",
+        "eslint": "^7.15.0",
+        "eslint-config-airbnb-base": "^14.2.1",
+        "eslint-plugin-import": "^2.22.1",
+        "jest": "^26.6.3",
+        "lerna": "3.22.1",
+        "ts-jest": "^26.4.4",
+        "ts-node": "^9.1.1",
+        "typescript": "^4.1.3"
+    },
+    "resolutions": {
+        "graphql": "15.4.0"
+    }
+}
