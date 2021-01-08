@@ -22,3 +22,5 @@ This is a monorepo to eventually house the majority of the core platform.
 - **Adding a local dependency?** - `yarn add @cityzen/ui@0.0.1` (forgetting to tag the version will lead to not found error).
 - **Run a script on a particular package, but from root?** - `yarn workspaces @cityzen/webapp run build`
 - **Update TS Config Automatically** - `yarn run update:tsconfig`.
+- **If you get the error (in webapp), cannot read property 'substring' of undefined** - in `/packages/webapp` run `GIT_COMMIT_SHA
+=$(git rev-parse HEAD)`.

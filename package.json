@@ -13,7 +13,8 @@
         "typescript:build": "tsc --build ./tsconfig.project.json",
         "typescript:watch": "yarn run typescript:build --watch",
         "typescript:clean": "rimraf  ./packages/*/{lib,*.tsbuildinfo}",
-        "update:tsconfig": "ts-node scripts/update-package-tsconfig.ts"
+        "update:tsconfig": "ts-node scripts/update-package-tsconfig.ts",
+        "script:populate-git-env:print": ". ./scripts/populate-git-env.sh && echo 'SHA: '${GIT_COMMIT_SHA} && echo 'REF (current branch/tag): '${GIT_COMMIT_REF} && echo 'TAGS: '${GIT_COMMIT_TAGS}"
     },
     "workspaces": [
         "packages/*"
