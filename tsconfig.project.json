@@ -1,0 +1,9 @@
+// File generated automatically, use yarn update:tsconfig for update
+{
+	"files": [],
+	"references": [
+		{
+			"path": "packages/webapp/tsconfig.package.json"
+		}
+	]
+}
